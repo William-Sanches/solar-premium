@@ -5,6 +5,7 @@ import { MaterialModule } from '../shared/material/material.module';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SupportComponent } from './support/support.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -17,7 +18,8 @@ import { SupportComponent } from './support/support.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    CarouselModule
   ],
   exports: [
     HomeComponent

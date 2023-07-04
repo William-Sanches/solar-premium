@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "solarpremium-e4943"
+  },
+  "targets": {
+    "solarpremium-e4943": {
+      "hosting": {
+        "solar-premium": [
+          "solarpremium-e4943"
+        ]
+      }
+    }
   }
 }

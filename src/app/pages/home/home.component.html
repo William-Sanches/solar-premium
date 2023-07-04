@@ -162,3 +162,175 @@
         </div>
     </div>
 </div>
+<div class="projetos">
+    <div class="projtexto">
+        <h2>
+            Conheça alguns de nossos projetos
+        </h2>
+    </div>
+    <div class="cardsContainer">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let p of listaProjetos">
+                <ng-template carouselSlide [id]="p.id">
+                    <mat-card class="cartaoProjeto">
+                        <img mat-card-image [src]="p.capa">
+                        <mat-card-content>
+                            <h2>{{ p.local }}</h2>
+                            <p>Geração de {{ p.geracao }}kW</p>
+                            <p>{{ p.npaineis }} painéis de {{ p.wpaineis }}W</p>
+                            <p>Inversor de {{ p.winversor }}kW</p>
+                        </mat-card-content>
+                    </mat-card>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+    <button mat-flat-button>Comece a economizar</button>
+</div>
+<div class="feedbacks">
+    <div class="feedtexto">
+        <h2>Feedbacks de</h2>
+        <p>quem economiza</p>
+    </div>
+    <div class="feedcardsContainer">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let f of listaFeedbacks">
+                <ng-template carouselSlide [id]="f.id">
+                    <div class="fbfoto">
+                        <img mat-card-image [src]="f.foto">
+                    </div>
+                    <mat-card class="cartaoFeedback">
+                        <div class="estrelas">
+                            <img src="assets/estrela.png">
+                            <img src="assets/estrela.png">
+                            <img src="assets/estrela.png">
+                            <img src="assets/estrela.png">
+                            <img src="assets/estrela.png">
+                        </div>
+                        <mat-card-content>
+                            <p>{{ f.comentario }}</p>
+                            <span>{{ f.nome }}</span>
+                        </mat-card-content>
+                    </mat-card>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+    </div>
+</div>
+<div class="faq">
+    <div class="faqtexto">
+        <h2>Perguntas <b>Frequentes</b></h2>
+    </div>
+    <div class="faqaccordeon">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        É muito caro investir em energia solar?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Qual o prazo de instalação do meu kit fotovoltaico?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Com quanto tempo eu recupero o meu investimento?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Qualquer residência pode ter energia solar?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        O sistema gera energia mesmo em dias frios ou nublados?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        Os painéis solares aguentam chuvas fortes, vento e granizo?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                        that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                        does limit overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
