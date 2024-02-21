@@ -1,0 +1,10 @@
+<div class="projetoForm">
+    <h2>Cadastrar Funcionário</h2>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="foto">Link do Banner</label>
+            <input type="text" class="form-control mb-2" id="foto" formControlName="foto" value="https://drive.google.com/uc?export=view&id=">
+        </div>
+        <button mat-button routerLink="/add-banner">Adicionar</button>
+    </form>
+</div>

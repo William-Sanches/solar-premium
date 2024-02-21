@@ -30,6 +30,8 @@
                     style="height: 80px;width: 80px;"></a>
             <a class="floatsm" href="https://wa.me/5518996494440" target="_blank"><img src="../assets/zapverde.png"
                     style="height: 40px;width: 40px;"></a>
+            <a *ngIf="isAuthenticated()" class="logout" routerLink="/logout">Logout</a>
+            <a *ngIf="isAuthenticated()" class="logoutsm" routerLink="/logout"><mat-icon>logout</mat-icon></a>
         </div>
         <div class="footer">
             <div class="content">

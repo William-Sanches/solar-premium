@@ -9,7 +9,7 @@
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
             aria-label="Slide 4"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-            aria-label="Slide 4"></button>
+            aria-label="Slide 5"></button>
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -27,17 +27,8 @@
                 <button mat-flat-button>Comece a economizar</button>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="assets/sp2.jpg" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/sp3.jpg" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/sp1.jpg" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="assets/sp4.jpg" alt="...">
+        <div class="carousel-item" *ngFor="let b of listaBanners">
+            <img src="{{ b.foto }}" alt="...">
         </div>
     </div>
 </div>
@@ -329,6 +320,54 @@
                         that just about any HTML can go within the <code>.accordion-body</code>, though the transition
                         does limit overflow.
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="faqButton">
+        <h3>Ficou alguma <b>dúvida?</b></h3>
+        <button mat-flat-button>Fale conosco</button>
+    </div>
+</div>
+<div class="where">
+    <div class="wheretext">
+        <img src="assets/maps.png">
+        <h2>Onde Estamos</h2>
+    </div>
+    <div class="whereinfo">
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923.9068925008562!2d-51.46675379999999!3d-22.1401712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9493f3471144fc35%3A0xbeaf852c643640e!2sSolar%20Premium!5e0!3m2!1spt-BR!2sbr!4v1689863462486!5m2!1spt-BR!2sbr"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contatos">
+            <h3>Entre em contato</h3>
+            <div class="contatositem">
+                <img src="assets/relogio.png" style="width: 40px;height: 40px;">
+                <div class="horariotext">
+                    <h4>Horário de atendimento</h4>
+                    <p><b>Segunda a sexta</b> das <b>8:00</b> às <b>18:00</b></p>
+                </div>
+            </div>
+            <div class="contatositem">
+                <img src="assets/telefoneazul.png" style="width: 40px;height: 40px;">
+                <div class="telefonetext">
+                    <h4>(18) 3909-0489 </h4>
+                    <button mat-flat-button>Ligue agora</button>
+                </div>
+            </div>
+            <div class="contatositem">
+                <img src="assets/zapazul.png" style="width: 40px;height: 40px;">
+                <div class="telefonetext">
+                    <h4>(18) 99792-2934 </h4>
+                    <button mat-flat-button>Whatsapp</button>
+                </div>
+            </div>
+            <div class="contatositem">
+                <img src="assets/emailazul.png" style="width: 40px;height: auto;">
+                <div class="emailtext">
+                    <h4>solarpremiumpp@gmail.com</h4>
                 </div>
             </div>
         </div>

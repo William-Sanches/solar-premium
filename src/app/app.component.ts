@@ -10,5 +10,15 @@ export class AppComponent {
 
   constructor() {}
 
+  isAuthenticated(): boolean {
+    let token: string | null = localStorage.getItem('token');
+    if (token === null) {
+      return false;
+    } else if (token === "true") {
+      return true;
+    }
+    return false;
+  }
+
 }
 

@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Router } from '@angular/router';
 import { BannersService } from 'src/app/services/banners.service';
 import { FeedbacksService } from 'src/app/services/feedbacks.service';
 import { ProjetosService } from 'src/app/services/projetos.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-adm-panel',
+  templateUrl: './adm-panel.component.html',
+  styleUrls: ['./adm-panel.component.scss']
 })
-
-export class HomeComponent implements OnInit {
+export class AdmPanelComponent implements OnInit {
 
   public listaProjetos: any = [];
   public listaFeedbacks: any = [];
@@ -18,16 +17,16 @@ export class HomeComponent implements OnInit {
 
   private service: ProjetosService;
   private serviceFb: FeedbacksService;
-  private serviceBanners: BannersService;
+  private serviceBn: BannersService;
+  private router: Router;
 
-  constructor(service: ProjetosService, servicefb: FeedbacksService, serviceBanner: BannersService) {
+  constructor(service: ProjetosService, servicefb: FeedbacksService, serviceBn: BannersService, router: Router) {
     this.service = service;
     this.serviceFb = servicefb;
-    this.serviceBanners = serviceBanner;
+    this.serviceBn = serviceBn;
+    this.router = router;
   }
-  /* constructor() {
 
-  } */
 
   ngOnInit(): void {
     this.service.findAll().subscribe((projetos) => {
@@ -59,7 +58,7 @@ export class HomeComponent implements OnInit {
       }
     });
 
-    this.serviceBanners.findAll().subscribe((banners) => {
+    this.serviceBn.findAll().subscribe((banners) => {
       this.listaBanners = [];
       for (let b of banners) {
         let bn = b.payload.doc.data();
@@ -71,36 +70,16 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  customOptions: OwlOptions = {
-    loop: true,
-    center: true,
-    mouseDrag: false,
-    touchDrag: true,
-    pullDrag: false,
-    autoplay: true,
-    autoplayHoverPause: true,
-    autoplayMouseleaveTimeout: 1,
-    dots: true,
-    navSpeed: 400,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1
-      },
-      540: {
-        items: 1.5
-      },
-      700: {
-        items: 2
-      },
-      1050: {
-        items: 3
-      },
-      1400: {
-        items: 4
-      }
-    },
-    nav: false
+  excluirProjeto(id: string): void {
+    if (window.confirm("Deseja, realmente, excluir o registro?")) {
+      this.service.remove(id);
+    }
+  }
+
+  excluirBanner(id: string): void {
+    if (window.confirm("Deseja, realmente, excluir o registro?")) {
+      this.serviceBn.remove(id);
+    }
   }
 
 }

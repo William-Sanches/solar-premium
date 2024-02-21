@@ -1,0 +1,24 @@
+@import "/src/styles.scss";
+
+.projetoForm {
+    background-color: white;
+    width: 100%;
+}
+
+label {
+    color: black;
+}
+
+h2, form {
+    width: 76%;
+    margin: auto;
+}
+
+button {
+    background-color: mat-color($theme-warn, lighter);
+    height: 50px;
+    font-size: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin: 10px;
+}

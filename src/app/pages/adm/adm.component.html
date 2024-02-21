@@ -1,0 +1,13 @@
+<div class="login">
+    <form class="form-login" [formGroup]="formLogin" (ngSubmit)="login()">
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Usuário</label>
+            <input type="email" class="form-control" id="email" placeholder="user@email.com" formControlName="email">
+        </div>
+        <div class="form-group mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senha" formControlName="senha">
+        </div>
+        <button mat-button type="submit">Entrar</button>
+    </form>
+</div>

@@ -1,0 +1,30 @@
+<div class="projetoForm">
+    <h2>Cadastrar Funcionário</h2>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="capa">Capa</label>
+            <input type="text" class="form-control mb-2" id="capa" formControlName="capa" value="https://drive.google.com/uc?export=view&id=">
+        </div>
+        <div class="form-group">
+            <label for="geracao">Geração</label>
+            <input type="number" class="form-control mb-2" id="geracao" formControlName="geracao">
+        </div>
+        <div class="form-group">
+            <label for="cargo">Local</label>
+            <input type="text" class="form-control mb-2" id="local" formControlName="local">
+        </div>
+        <div class="form-group">
+            <label for="npaineis">Quantidade de painéis</label>
+            <input type="number" class="form-control mb-2" id="npaineis" formControlName="npaineis">
+        </div>
+        <div class="form-group">
+            <label for="winversor">Potência do(s) Inversor(es)</label>
+            <input type="number" class="form-control mb-2" id="winversor" formControlName="winversor">
+        </div>
+        <div class="form-group">
+            <label for="wpaineis">Potência dos Painéis</label>
+            <input type="number" class="form-control mb-2" id="wpaineis" formControlName="wpaineis">
+        </div>
+        <button mat-button routerLink="/add-project">Adicionar</button>
+    </form>
+</div>

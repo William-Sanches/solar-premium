@@ -313,6 +313,39 @@ div.credits h4{
     z-index: 1000; //posiciona o botão acima dos demais componentes da página
 }
 
+.logout {
+    position: fixed;
+    bottom: 60px; //fixa o botão à 40px do fim da página
+    right: 30px; //fixa o botão a 10px da borda direita da página
+    z-index: 1000;
+    background-color: mat-color($theme-warn, main);
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoutsm {
+    display: none;
+    position: fixed;
+    bottom: 60px; //fixa o botão à 40px do fim da página
+    right: 60px; //fixa o botão a 10px da borda direita da página
+    border: 1px dotted rgba(130, 130, 130, 0.3);
+    z-index: 1000;
+    background-color: mat-color($theme-warn, main);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 11px;
+    padding-left: 2px;
+}
+
 .example-container {
     width: 500px;
     height: 300px;
@@ -385,6 +418,14 @@ a.menubutton {
 
     .float {
         display: none;
+    }
+
+    .logout {
+        display: none;
+    }
+
+    .logoutsm {
+        display: block;
     }
 
     .location p{

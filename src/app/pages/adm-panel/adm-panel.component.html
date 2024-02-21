@@ -1,0 +1,46 @@
+<div class="painel">
+    <h2>Banners</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Foto</th>
+                <th scope="col">Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of listaBanners">
+                <td><img [src]="b.foto" alt="foto" style="width: 150px; height: 150px;"></td>
+                <td><button mat-button class="deletebtn" (click)="excluirBanner(b.id)">Apagar</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="tableButton">
+        <button mat-button routerLink="/add-banner">Novo Banner</button>
+    </div>
+    <h2>Projetos</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Capa</th>
+                <th scope="col">Geração</th>
+                <th scope="col">Local</th>
+                <th scope="col">Painéis</th>
+                <th scope="col">Inversor</th>
+                <th scope="col">Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of listaProjetos">
+                <td><img [src]="p.capa" alt="foto" style="width: 150px; height: 150px;"></td>
+                <td>{{ p.geracao }}</td>
+                <td>{{ p.local }}</td>
+                <td>{{ p.npaineis }} de {{ p.wpaineis }}W</td>
+                <td>{{ p.winversor }}kW</td>
+                <td><button mat-button class="deletebtn" (click)="excluirProjeto(p.id)">Apagar</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="tableButton">
+        <button mat-button routerLink="/add-project">Novo Projeto</button>
+    </div>
+</div>
